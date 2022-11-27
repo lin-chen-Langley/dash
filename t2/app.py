@@ -23,7 +23,8 @@ app.layout = get_layout()
     Input("button", "n_clicks"),
 )
 def update_click(n):
-    return str(n)
+    number = n if n is not None else 0
+    return str(number)
 
 if __name__ == "__main__":
     app.run_server(debug=True)
